@@ -1,0 +1,24 @@
+{
+    "preguntas": [
+        {
+            "pregunta": "Poner(Rojo) tiene precondición?",
+            "posibleRespuesta": [
+                "SI",
+                "NO"
+            ],
+            "respuesta": "no"
+        },
+        {
+            "pregunta": "Sacar(Rojo) tiene precondición?",
+            "posibleRespuesta": [
+                "SI",
+                "NO"
+            ],
+            "respuesta": "si"
+        }
+    
+    
+    
+    
+    ]
+}
