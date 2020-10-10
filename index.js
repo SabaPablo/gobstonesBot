@@ -2,6 +2,8 @@ require('dotenv').config();
 
 const Discord = require("discord.js");
 const preguntas = require("./preguntas.json")
+const elogios = require("./elogios.json")
+const fails = require("./fails.json")
 
 const prefix = "?";
 
@@ -22,6 +24,10 @@ var preguntaActiva = {}
 initMatrix()
 
 function initMatrix(){
+  /*
+  PROPOSITO: iniciar el tablero
+  PRECONDICIÓN: Ninguna
+  */
   matrix = [];
   for(var i=0; i<tab_y; i++) {
     matrix[i] =[]
@@ -32,6 +38,15 @@ function initMatrix(){
 }
 
 function configTable(x,y){
+  /*
+    PROPOSITO: cambiar el tamaño del tablero
+    PRECONDICIÓN: 
+        - x no puede ser menor a 1 y mayor a 8
+        - y no puede ser menor a 1 y mayor a 8
+    PARAMETROS: 
+        - x: es numerico, representa el ancho del tablero
+        - y: es numerico, representa el alto del tablero
+  */
   tab_x = x;
   tab_y = y;
   restart()
@@ -39,11 +54,23 @@ function configTable(x,y){
 
 
 function poner(color){
+  /*
+    PROPOSITO: Pone una bolita de color "color"
+    PRECONDICIÓN: Ninguna
+    PARAMETROS: 
+        - color: es tipo Color, es el color a poner
+  */
   matrix[x][y] = color
   return(printMatrix())
 }
 
 function sacar(color){
+  /*
+    PROPOSITO: Saca una bolita de color "color"
+    PRECONDICIÓN: Debe existir una bolita de color "color
+    PARAMETROS: 
+        - color: es tipo Color, es el color a sacar
+  */
   if(color == printCelda(x,y)){
     matrix[x][y] = ':white_large_square:'
     return(printMatrix())
@@ -52,10 +79,22 @@ function sacar(color){
 }
 
 function hayBolitas(color){
+    /*
+    PROPOSITO: Dice si hay bolita en la celda actual
+    PRECONDICIÓN: Ninguna
+    PARAMETROS: 
+        - color: es tipo Color
+  */
   return color === printCelda(x,y)
 }
 
 function boom(message){
+    /*
+    PROPOSITO: Explota por los aires y devuelve el mensaje 'mensaje'
+    PRECONDICIÓN: Ninguna
+    PARAMETROS: 
+        - message: es tipo String, es el mensaje a mostrar
+  */
   restart();
   return `:boom::boom::bangbang:BOOM:bangbang::boom::boom:(${message})`;
 }
@@ -67,6 +106,12 @@ function restart(){
 }
 
 function hacerPregunta(pregunton){
+  /*
+    PROPOSITO: hace una pregunta al azar
+    PRECONDICIÓN: Ninguna
+    PARAMETROS: 
+        - pregunton: es tipo String, es el nombre del que pregunta
+  */
   quienPregunto = pregunton;
   preguntaOn = true;
   return preguntaAlAzar()
@@ -91,8 +136,6 @@ function revisarRespuesta(respuesta){
   return preguntaActiva.respuesta === respuesta.toLowerCase();
 
 }
-
-
 
 function mover(direccion){
   switch(direccion){
@@ -154,9 +197,17 @@ const help =
   :small_orange_diamond: puedeMover(dirección)
   :small_orange_diamond: hayBolitas(color)
 
+
+:arrow_right: EJERCITACIÓN
+  :small_orange_diamond: pregunta
+
 :arrow_right: CONFIGURACIÓN
   :small_orange_diamond: configurarTablero(x,y)
   :small_orange_diamond: inicializar()
+
+:arrow_right: AYUDA
+  :small_orange_diamond: help
+
 
 :construction: https://github.com/wisaku/gobstonesBot
 
@@ -171,9 +222,11 @@ function printCelda(i,w){
 
 function verRespuesta(respuesta){
   if(revisarRespuesta(respuesta)){
-    return ":white_check_mark: CORRECTO"
+    const exp =  elogios[getRandomInt(0,elogios.length)]
+    return `:white_check_mark: CORRECTO (${exp})`
   }else{
-    return ":x: ERROR"
+    const exp =  fails[getRandomInt(0,fails.length)]
+    return `:x: ERROR (${exp})`
   }
 }
 
@@ -225,8 +278,6 @@ client.on("message", function(message) {
     }
   }
 
-
- 
 });  
 
 function configuracionOError(message, command){
@@ -245,6 +296,5 @@ function configuracionOError(message, command){
     message.reply(`el comando ${command} no es valido!`);
   }
 }
-
 
 client.login(process.env.TOKEN);

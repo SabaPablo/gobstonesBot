@@ -15,10 +15,129 @@
                 "NO"
             ],
             "respuesta": "si"
+        },
+        {
+            "pregunta": "¿Qué asignatura de la UNQ es mejor?",
+            "posibleRespuesta": [
+                "Mate",
+                "Intro",
+                "Base de datos",
+                "Objetos",
+                "Orga"
+            ],
+            "respuesta": "Intro"
+        },
+        {
+            "pregunta": "¿Qué tipo devuelve hayBolitas(Negro)?",
+            "posibleRespuesta": [
+                "Color",
+                "Direccion",
+                "no devuelve nada",
+                "numero",
+                "un booleano"
+            ],
+            "respuesta": "un booleano"
+        },
+        {
+            "pregunta": "¿Qué tipo devuelve hayBolitas(Negro)?",
+            "posibleRespuesta": [
+                "Color",
+                "Direccion",
+                "no devuelve nada",
+                "numero",
+                "un booleano"
+            ],
+            "respuesta": "un booleano"
+        },
+        {
+            "pregunta": "¿Qué tipo devuelve Poner(Negro)?",
+            "posibleRespuesta": [
+                "Color",
+                "Direccion",
+                "no devuelve nada",
+                "numero",
+                "un booleano"
+            ],
+            "respuesta": "no devuelve nada"
+        },
+        {
+            "pregunta": "¿Por qué es tan importante identar mi codigo?",
+            "posibleRespuesta": [
+                "Porque lo dice Fidel",
+                "No es necesario",
+                "Para que el codigo sea mas legible",
+                "Para que funcione"
+            ],
+            "respuesta": "Para que el codigo sea mas legible"
+        },
+        {
+            "pregunta": "¿Quién es la mamá de Intro?",
+            "posibleRespuesta": [
+                "Fidel",
+                "Pablote",
+                "Vale",
+                "Saba",
+                "Charly",
+                "Alan"
+            ],
+            "respuesta": "Fidel"
+        },
+        {
+            "pregunta": "¿Quién es el papá de Intro?",
+            "posibleRespuesta": [
+                "Fidel",
+                "Pablote",
+                "Vale",
+                "Saba",
+                "Charly",
+                "Alan"
+            ],
+            "respuesta": "Pablote"
+        },
+        {
+            "pregunta": "¿Que sucede si hago Mover(Este) y el cabezal esta en el borde Este?",
+            "posibleRespuesta": [
+                "BOOM",
+                "No se mueve",
+                "Vuelve al principio",
+                "Se agranda el tablero"
+            ],
+            "respuesta": "BOOM"
+        },
+        {
+            "pregunta": "¿Cuando un procedimiento es total?",
+            "posibleRespuesta": [
+                "Cuando lo termino de programar",
+                "Cuando no tiene precondiciones",
+                "Cuando recorre todo el tablero",
+                "Cuando tiene escritas todas las precondiciones"
+            ],
+            "respuesta": "Cuando no tiene precondiciones"
+        },
+        {
+            "pregunta": "¿Que me conviene usar si tengo que recorrer todo el tablero?",
+            "posibleRespuesta": [
+                "repeat",
+                "if",
+                "forEach",
+                "while"
+            ],
+            "respuesta": "forEach"
+        },
+        {
+            "pregunta": "¿Que me conviene usar si tengo que hacer un recorrido de busqueda?",
+            "posibleRespuesta": [
+                "repeat",
+                "if",
+                "forEach",
+                "while"
+            ],
+            "respuesta": "while"
         }
     
     
     
     
+
     ]
 }
