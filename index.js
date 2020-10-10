@@ -1,7 +1,6 @@
 require('dotenv').config(); 
 
 const Discord = require("discord.js");
-export const DISCORD_TOKEN = process.env.TOKEN;
 
 
 const prefix = "?";
@@ -194,4 +193,4 @@ function configuracionOError(message, command){
 }
 
 
-client.login(DISCORD_TOKEN);
+client.login(process.env.TOKEN);
