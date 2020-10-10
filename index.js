@@ -74,10 +74,10 @@ function hacerPregunta(pregunton){
 }
 
 function preguntaAlAzar(){
-  preguntaActiva =  preguntas.preguntas[getRandomInt(0,preguntas.preguntas.length-1)]
+  preguntaActiva =  preguntas.preguntas[getRandomInt(0,preguntas.preguntas.length)]
   respuestasPosibles = '';
   preguntaActiva.posibleRespuesta.forEach(element => {
-    respuestasPosibles += ` ${element}`
+    respuestasPosibles += `   :ballot_box_with_check: ${element}`
   });
   return `
   :question: ${preguntaActiva.pregunta}
@@ -188,6 +188,7 @@ client.on("message", function(message) {
 
   if(preguntaOn){
     message.reply(verRespuesta(command));
+    preguntaOn = false;
   }else{
     switch(command){
       case "hola" : message.reply(`Hola ${message.author.username}`);break;  
