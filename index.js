@@ -87,7 +87,7 @@ function preguntaAlAzar(){
   `
 }
 
-revisarRespuesta(respuesta){
+function revisarRespuesta(respuesta){
   return preguntaActiva.respuesta === respuesta.toLowerCase();
 
 }
