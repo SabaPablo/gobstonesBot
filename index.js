@@ -192,43 +192,45 @@ client.on("message", function(message) {
   const args = commandBody.split(' ');
   const command = args.shift();
 
-
-
-  switch(command){
-    case "hola" : message.reply(`Hola ${message.author.username}`);break;
-    case preguntaOn: messagge.reply( verRespuesta(command));
-
-    case "Mover(Norte)" : message.reply(mover('Norte')); break;
-    case "Mover(Sur)" : message.reply(mover('Sur')); break;
-    case "Mover(Este)" : message.reply(mover('Este')); break;
-    case "Mover(Oeste)" : message.reply(mover('Oeste')); break;
-
-    case "Poner(Negro)" : message.reply(poner(':black_large_square:')); break;
-    case "Poner(Rojo)" : message.reply(poner(':red_square:'));break;
-    case "Poner(Azul)" : message.reply(poner(':blue_square:'));break;
-    case "Poner(Verde)" : message.reply(poner(':green_square:'));break;
-
-    case "Sacar(Negro)" : message.reply(sacar(':black_circle:')); break;
-    case "Sacar(Rojo)" : message.reply(sacar(':red_circle:'));break;
-    case "Sacar(Azul)" : message.reply(sacar(':blue_circle:'));break;
-    case "Sacar(Verde)" : message.reply(poner(':green_circle:'));break;
-
-    case "hayBolitas(Negro)" : message.reply(hayBolitas(':black_circle:')); break;
-    case "hayBolitas(Rojo)" : message.reply(hayBolitas(':red_circle:'));break;
-    case "hayBolitas(Azul)" : message.reply(hayBolitas(':blue_circle:'));break;
-    case "hayBolitas(Verde)" : message.reply(hayBolitas(':green_circle:'));break;
-
-    case "puedeMover(Sur)" : message.reply(puedeMover('Sur')); break;
-    case "puedeMover(Este)" : message.reply(puedeMover('Este')); break;
-    case "puedeMover(Oeste)" : message.reply(puedeMover('Oeste')); break;
-    
-    case "inicializar()": message.reply(restart())
-
-    case "help" : message.reply(help); break;
-    case "pregunta" : message.reply(hacerPregunta(message.author.username)); break;
-    default: configuracionOError(message, command)
+  if(preguntaOn){
+    messagge.reply( verRespuesta(command));
+  }else{
+    switch(command){
+      case "hola" : message.reply(`Hola ${message.author.username}`);break;  
+      case "Mover(Norte)" : message.reply(mover('Norte')); break;
+      case "Mover(Sur)" : message.reply(mover('Sur')); break;
+      case "Mover(Este)" : message.reply(mover('Este')); break;
+      case "Mover(Oeste)" : message.reply(mover('Oeste')); break;
   
+      case "Poner(Negro)" : message.reply(poner(':black_large_square:')); break;
+      case "Poner(Rojo)" : message.reply(poner(':red_square:'));break;
+      case "Poner(Azul)" : message.reply(poner(':blue_square:'));break;
+      case "Poner(Verde)" : message.reply(poner(':green_square:'));break;
+  
+      case "Sacar(Negro)" : message.reply(sacar(':black_circle:')); break;
+      case "Sacar(Rojo)" : message.reply(sacar(':red_circle:'));break;
+      case "Sacar(Azul)" : message.reply(sacar(':blue_circle:'));break;
+      case "Sacar(Verde)" : message.reply(poner(':green_circle:'));break;
+  
+      case "hayBolitas(Negro)" : message.reply(hayBolitas(':black_circle:')); break;
+      case "hayBolitas(Rojo)" : message.reply(hayBolitas(':red_circle:'));break;
+      case "hayBolitas(Azul)" : message.reply(hayBolitas(':blue_circle:'));break;
+      case "hayBolitas(Verde)" : message.reply(hayBolitas(':green_circle:'));break;
+  
+      case "puedeMover(Sur)" : message.reply(puedeMover('Sur')); break;
+      case "puedeMover(Este)" : message.reply(puedeMover('Este')); break;
+      case "puedeMover(Oeste)" : message.reply(puedeMover('Oeste')); break;
+      
+      case "inicializar()": message.reply(restart())
+  
+      case "help" : message.reply(help); break;
+      case "pregunta" : message.reply(hacerPregunta(message.author.username)); break;
+      default: configuracionOError(message, command)
+    
+    }
   }
+
+
  
 });  
 
