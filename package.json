@@ -1,0 +1,14 @@
+{
+  "name": "discord-bot",
+  "version": "1.0.0",
+  "description": "bot-discord",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Saba",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.3.1"
+  }
+}
