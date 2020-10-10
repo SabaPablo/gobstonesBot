@@ -1,7 +1,7 @@
 require('dotenv').config(); 
 
 const Discord = require("discord.js");
-
+const preguntas = require("./preguntas.json")
 
 const prefix = "?";
 
@@ -14,6 +14,10 @@ var tab_x = 4;
 var tab_y = 4;
 
 var matrix = [];
+
+var preguntaOn = false
+var quienPregunto = ""
+var preguntaActiva = {}
 
 initMatrix()
 
@@ -62,6 +66,34 @@ function restart(){
   initMatrix()
 }
 
+function hacerPregunta(pregunton){
+  quienPregunto = pregunton;
+  preguntaOn = true;
+  return preguntaAlAzar()
+
+}
+
+function preguntaAlAzar(){
+  preguntaActiva =  preguntas.preguntas[getRandomInt(0,preguntas.preguntas.length-1)]
+  respuestasPosibles = '';
+  preguntaActiva.posibleRespuesta.forEach(element => {
+    respuestasPosibles += ` ${element}`
+  });
+  return `
+  :question: ${preguntaActiva.pregunta}
+  
+  ${respuestasPosibles}
+  
+  `
+}
+
+revisarRespuesta(respuesta){
+  return preguntaActiva.respuesta === respuesta.toLowerCase();
+
+}
+
+
+
 function mover(direccion){
   switch(direccion){
     case "Norte": y +=1 ;break;
@@ -74,6 +106,11 @@ function mover(direccion){
   }
   return(printMatrix())
 }
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
 
 function puedeMover(direccion){
   res = false;
@@ -132,13 +169,39 @@ function printCelda(i,w){
   return matrix[i][w]
 }
 
+function verRespuesta(respuesta){
+  if(revisarRespuesta(respuesta)){
+    return ":white_check_mark: CORRECTO"
+  }else{
+    return ":x: ERROR"
+  }
+}
+
+
 client.on("message", function(message) { 
   if (message.author.bot) return;
+
+  if(preguntaOn){
+    if(pregunton === message.author.username){
+      messagge.reply( verRespuesta(message.content));
+    }else{
+      if(message.content ==="cancel"){
+        preguntaOn = false
+        message.reply("pregunta cancelada");
+
+      }else{
+        return;
+      }
+    }
+  }
+
+
   if (!message.content.startsWith(prefix)) return;
 
   const commandBody = message.content.slice(prefix.length);
   const args = commandBody.split(' ');
   const command = args.shift();
+
 
 
   switch(command){
@@ -170,7 +233,7 @@ client.on("message", function(message) {
     case "inicializar()": message.reply(restart())
 
     case "help" : message.reply(help); break;
-
+    case "pregunta" : message.reply(hacerPregunta(message.author.username)); break;
     default: configuracionOError(message, command)
   
   }
