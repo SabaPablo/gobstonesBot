@@ -184,17 +184,16 @@ client.on("message", function(message) {
   if(preguntaOn){
     if(pregunton === message.author.username){
       messagge.reply( verRespuesta(message.content));
+      
     }else{
       if(message.content ==="cancel"){
         preguntaOn = false
         message.reply("pregunta cancelada");
 
-      }else{
-        return;
       }
     }
+    return;
   }
-
 
   if (!message.content.startsWith(prefix)) return;
 
