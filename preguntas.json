@@ -112,7 +112,7 @@
                 "Cuando recorre todo el tablero",
                 "Cuando tiene escritas todas las precondiciones"
             ],
-            "respuesta": "Cuando no tiene precondiciones"
+            "respuesta": "cuando no tiene precondiciones"
         },
         {
             "pregunta": "¿Que me conviene usar si tengo que recorrer todo el tablero?",
