@@ -183,9 +183,7 @@ client.on("message", function(message) {
 
   if(preguntaOn){
 
-      messagge.reply( verRespuesta(message.content));
       
-    return;
   }
 
   if (!message.content.startsWith(prefix)) return;
@@ -198,6 +196,8 @@ client.on("message", function(message) {
 
   switch(command){
     case "hola" : message.reply(`Hola ${message.author.username}`);break;
+    case preguntaOn: messagge.reply( verRespuesta(command));
+
     case "Mover(Norte)" : message.reply(mover('Norte')); break;
     case "Mover(Sur)" : message.reply(mover('Sur')); break;
     case "Mover(Este)" : message.reply(mover('Este')); break;
