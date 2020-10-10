@@ -133,7 +133,7 @@ function preguntaAlAzar(){
 }
 
 function revisarRespuesta(respuesta){
-  return preguntaActiva.respuesta === respuesta.toLowerCase();
+  return preguntaActiva.respuesta == respuesta.toLowerCase();
 
 }
 
