@@ -240,7 +240,7 @@ client.on("message", function(message) {
   const command = args.shift();
 
   if(preguntaOn){
-    message.reply(verRespuesta(command));
+    message.reply(verRespuesta(commandBody));
     preguntaOn = false;
   }else{
     switch(command){
