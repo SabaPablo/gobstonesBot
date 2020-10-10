@@ -121,6 +121,8 @@ const help =
   :small_orange_diamond: configurarTablero(x,y)
   :small_orange_diamond: inicializar()
 
+:construction: https://github.com/wisaku/gobstonesBot
+
 `;
 
 function printCelda(i,w){
