@@ -1,5 +1,6 @@
 const Discord = require("discord.js");
-const config = require("./config.json");
+export const DISCORD_TOKEN = process.env["token"];
+
 
 const prefix = "?";
 
@@ -191,4 +192,4 @@ function configuracionOError(message, command){
 }
 
 
-client.login(config.BOT_TOKEN);
+client.login(DISCORD_TOKEN);
