@@ -180,12 +180,6 @@ function verRespuesta(respuesta){
 
 client.on("message", function(message) { 
   if (message.author.bot) return;
-
-  if(preguntaOn){
-
-      
-  }
-
   if (!message.content.startsWith(prefix)) return;
 
   const commandBody = message.content.slice(prefix.length);
@@ -193,7 +187,7 @@ client.on("message", function(message) {
   const command = args.shift();
 
   if(preguntaOn){
-    messagge.reply( verRespuesta(command));
+    message.reply(verRespuesta(command));
   }else{
     switch(command){
       case "hola" : message.reply(`Hola ${message.author.username}`);break;  
