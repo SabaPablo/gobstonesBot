@@ -25,7 +25,7 @@
                 "Objetos",
                 "Orga"
             ],
-            "respuesta": "Intro"
+            "respuesta": "intro"
         },
         {
             "pregunta": "¿Qué tipo devuelve hayBolitas(Negro)?",
@@ -68,7 +68,7 @@
                 "Para que el codigo sea mas legible",
                 "Para que funcione"
             ],
-            "respuesta": "Para que el codigo sea mas legible"
+            "respuesta": "para que el codigo sea mas legible"
         },
         {
             "pregunta": "¿Quién es la mamá de Intro?",
@@ -80,7 +80,7 @@
                 "Charly",
                 "Alan"
             ],
-            "respuesta": "Fidel"
+            "respuesta": "fidel"
         },
         {
             "pregunta": "¿Quién es el papá de Intro?",
@@ -92,7 +92,7 @@
                 "Charly",
                 "Alan"
             ],
-            "respuesta": "Pablote"
+            "respuesta": "pablote"
         },
         {
             "pregunta": "¿Que sucede si hago Mover(Este) y el cabezal esta en el borde Este?",
@@ -102,7 +102,7 @@
                 "Vuelve al principio",
                 "Se agranda el tablero"
             ],
-            "respuesta": "BOOM"
+            "respuesta": "boom"
         },
         {
             "pregunta": "¿Cuando un procedimiento es total?",
@@ -122,7 +122,7 @@
                 "forEach",
                 "while"
             ],
-            "respuesta": "forEach"
+            "respuesta": "foreach"
         },
         {
             "pregunta": "¿Que me conviene usar si tengo que hacer un recorrido de busqueda?",
