@@ -290,7 +290,7 @@ client.on("message", function(message) {
       case "Sacar(Negro)" : message.reply(sacar(':black_circle:')); break;
       case "Sacar(Rojo)" : message.reply(sacar(':red_circle:'));break;
       case "Sacar(Azul)" : message.reply(sacar(':blue_circle:'));break;
-      case "Sacar(Verde)" : message.reply(poner(':green_circle:'));break;
+      case "Sacar(Verde)" : message.reply(sacar(':green_circle:'));break;
   
       case "hayBolitas(Negro)" : message.reply(hayBolitas(':black_circle:')); break;
       case "hayBolitas(Rojo)" : message.reply(hayBolitas(':red_circle:'));break;
