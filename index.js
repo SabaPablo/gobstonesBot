@@ -230,7 +230,8 @@ const help =
 
 
 :arrow_right: EJERCITACIÓN
-  :small_orange_diamond: pregunta
+  :small_orange_diamond: pregunta al azar
+  :small_orange_diamond: pregunta unidad x
 
 :arrow_right: CONFIGURACIÓN
   :small_orange_diamond: configurarTablero(x,y)
