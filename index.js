@@ -230,8 +230,8 @@ const help =
 
 
 :arrow_right: EJERCITACIÓN
-  :small_orange_diamond: preguntaAzarosa()
-  :small_orange_diamond: preguntaUnidad(unidad)
+  :small_orange_diamond: preguntaAzarosa()       //Alerta de spoiler
+  :small_orange_diamond: preguntaUnidad(unidad)  //Elije la unidad [1-9]
 
 :arrow_right: CONFIGURACIÓN
   :small_orange_diamond: configurarTablero(x,y)
