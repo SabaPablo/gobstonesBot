@@ -135,7 +135,7 @@ function hacerPreguntaDe(pregunton,laUnidad){
 
 function preguntaDe(laUnidad){
   const preguntasDeLaUnidad = preguntas.preguntas.filter(pregunta => pregunta.unidad == laUnidad)
-  preguntaActiva =  preguntasDeLaUnidad[getRandomInt(0,preguntas.preguntas.length)]
+  preguntaActiva =  preguntasDeLaUnidad[getRandomInt(0,preguntasDeLaUnidad.length)]
   respuestasPosibles = '';
   preguntaActiva.posibleRespuesta.forEach(element => {
     respuestasPosibles += `   :ballot_box_with_check: ${element}`
