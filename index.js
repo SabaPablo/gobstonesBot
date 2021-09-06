@@ -230,8 +230,8 @@ const help =
 
 
 :arrow_right: EJERCITACIÓN
-  :small_orange_diamond: pregunta al azar
-  :small_orange_diamond: pregunta unidad x
+  :small_orange_diamond: preguntaAzarosa()
+  :small_orange_diamond: preguntaUnidad(unidad)
 
 :arrow_right: CONFIGURACIÓN
   :small_orange_diamond: configurarTablero(x,y)
@@ -313,7 +313,7 @@ client.on("message", function(message) {
       case "preguntaUnidad(7)" : message.reply(hacerPreguntaDe(message.author.username),7); break;
       case "preguntaUnidad(8)" : message.reply(hacerPreguntaDe(message.author.username),8); break;
       case "preguntaUnidad(9)" : message.reply(hacerPreguntaDe(message.author.username),9); break;
-      case "preguntaAzarosa" : message.reply(hacerPregunta(message.author.username)); break;
+      case "preguntaAzarosa()" : message.reply(hacerPregunta(message.author.username)); break;
       default: configuracionOError(message, command)
     
     }
