@@ -118,6 +118,37 @@ function hacerPregunta(pregunton){
 
 }
 
+function hacerPreguntaDe(pregunton,laUnidad){
+  /*
+    PROPOSITO: hace una pregunta al azar
+    PRECONDICIÓN: Ninguna
+    PARAMETROS: 
+        - pregunton: es tipo String, es el nombre del que pregunta
+        - laUnidad: es tipo Int, es el número de la unidad
+      */
+  quienPregunto = pregunton;
+  preguntaOn = true;
+  return preguntaDe(laUnidad)
+
+}
+
+
+function preguntaDe(laUnidad){
+  const preguntasDeLaUnidad = preguntas.preguntas.filter(pregunta => pregunta.unidad == laUnidad)
+  preguntaActiva =  preguntasDeLaUnidad[getRandomInt(0,preguntas.preguntas.length)]
+  respuestasPosibles = '';
+  preguntaActiva.posibleRespuesta.forEach(element => {
+    respuestasPosibles += `   :ballot_box_with_check: ${element}`
+  });
+  return `
+  :question: ${preguntaActiva.pregunta}
+  
+  ${respuestasPosibles}
+  
+  `
+}
+
+
 function preguntaAlAzar(){
   preguntaActiva =  preguntas.preguntas[getRandomInt(0,preguntas.preguntas.length)]
   respuestasPosibles = '';
@@ -272,7 +303,21 @@ client.on("message", function(message) {
       case "inicializar()": message.reply(restart())
   
       case "help" : message.reply(help); break;
-      case "pregunta" : message.reply(hacerPregunta(message.author.username)); break;
+      case "pregunta unidad 1" : message.reply(hacerPreguntaDe(message.author.username),1); break;
+      case "pregunta unidad 2" : message.reply(hacerPreguntaDe(message.author.username),2); break;
+      case "pregunta unidad 3" : message.reply(hacerPreguntaDe(message.author.username),3); break;
+      case "pregunta unidad 4" : message.reply(hacerPreguntaDe(message.author.username),4); break;
+      case "pregunta unidad 5" : message.reply(hacerPreguntaDe(message.author.username),5); break;
+      case "pregunta unidad 6" : message.reply(hacerPreguntaDe(message.author.username),6); break;
+      case "pregunta unidad 7" : message.reply(hacerPreguntaDe(message.author.username),7); break;
+      case "pregunta unidad 8" : message.reply(hacerPreguntaDe(message.author.username),8); break;
+      case "pregunta unidad 9" : message.reply(hacerPreguntaDe(message.author.username),9); break;
+
+
+
+
+
+      case "pregunta al azar" : message.reply(hacerPregunta(message.author.username)); break;
       default: configuracionOError(message, command)
     
     }

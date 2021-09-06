@@ -2,6 +2,7 @@
     "preguntas": [
         {
             "pregunta": "Poner(Rojo) tiene precondición?",
+            "unidad":1,
             "posibleRespuesta": [
                 "SI",
                 "NO"
@@ -10,6 +11,7 @@
         },
         {
             "pregunta": "Sacar(Rojo) tiene precondición?",
+            "unidad":1,
             "posibleRespuesta": [
                 "SI",
                 "NO"
@@ -18,6 +20,7 @@
         },
         {
             "pregunta": "¿Qué asignatura de la UNQ es mejor?",
+            "unidad":1,
             "posibleRespuesta": [
                 "Mate",
                 "Intro",
@@ -28,7 +31,39 @@
             "respuesta": "intro"
         },
         {
+            "pregunta": "¿Cómo debe empezar el nombre de un Procedimiento?",
+            "unidad":2,
+            "posibleRespuesta": [
+                "Con minuscula",
+                "Con un sustantivo",
+                "Con un verbo",
+                "Con numeros"
+            ],
+            "respuesta": "con un verbo"
+        },
+        {
+            "pregunta": "¿Se documentan los parametros?",
+            "unidad":3,
+            "posibleRespuesta": [
+                "Si",
+                "No"
+            ],
+            "respuesta": "si"
+        },
+        {
+            "pregunta": "¿Que es un parametro?",
+            "unidad":3,
+            "posibleRespuesta": [
+                "Un argumento",
+                "El resultado",
+                "Un numero",
+                "Un booleano"
+            ],
+            "respuesta": "un argumento"
+        },
+        {
             "pregunta": "¿Qué tipo devuelve hayBolitas(Negro)?",
+            "unidad":4,
             "posibleRespuesta": [
                 "Color",
                 "Direccion",
@@ -40,6 +75,7 @@
         },
         {
             "pregunta": "¿Qué tipo devuelve hayBolitas(Negro)?",
+            "unidad":4,
             "posibleRespuesta": [
                 "Color",
                 "Direccion",
@@ -51,6 +87,7 @@
         },
         {
             "pregunta": "¿Qué tipo devuelve Poner(Negro)?",
+            "unidad":4,
             "posibleRespuesta": [
                 "Color",
                 "Direccion",
@@ -62,6 +99,7 @@
         },
         {
             "pregunta": "¿Por qué es tan importante identar mi codigo?",
+            "unidad":1,
             "posibleRespuesta": [
                 "Porque lo dice Fidel",
                 "No es necesario",
@@ -71,31 +109,8 @@
             "respuesta": "para que el codigo sea mas legible"
         },
         {
-            "pregunta": "¿Quién es la mamá de Intro?",
-            "posibleRespuesta": [
-                "Fidel",
-                "Pablote",
-                "Vale",
-                "Saba",
-                "Charly",
-                "Alan"
-            ],
-            "respuesta": "fidel"
-        },
-        {
-            "pregunta": "¿Quién es el papá de Intro?",
-            "posibleRespuesta": [
-                "Fidel",
-                "Pablote",
-                "Vale",
-                "Saba",
-                "Charly",
-                "Alan"
-            ],
-            "respuesta": "pablote"
-        },
-        {
             "pregunta": "¿Que sucede si hago Mover(Este) y el cabezal esta en el borde Este?",
+            "unidad":1,
             "posibleRespuesta": [
                 "BOOM",
                 "No se mueve",
@@ -106,6 +121,7 @@
         },
         {
             "pregunta": "¿Cuando un procedimiento es total?",
+            "unidad":5,
             "posibleRespuesta": [
                 "Cuando lo termino de programar",
                 "Cuando no tiene precondiciones",
@@ -115,17 +131,51 @@
             "respuesta": "cuando no tiene precondiciones"
         },
         {
-            "pregunta": "¿Que me conviene usar si tengo que recorrer todo el tablero?",
+            "pregunta": "¿Que pasa si siempre se cumple la condición de una repetición condicional?",
+            "unidad":6,
             "posibleRespuesta": [
-                "repeat",
-                "if",
-                "forEach",
-                "while"
+                "Nada",
+                "Ejecuta 10 veces su bloque de codigo",
+                "Loop infinito",
+                "Termina en la primera iteración"
             ],
-            "respuesta": "foreach"
+            "respuesta": "loop infinito"
+        },
+
+        {
+            "pregunta": "¿Cual es el alcance de una variable?",
+            "unidad":7,
+            "posibleRespuesta": [
+                "Global",
+                "Todo el proyecto",
+                "Local",
+                "Depende del nombre"
+            ],
+            "respuesta": "local"
+        },
+        {
+            "pregunta": "¿Cuando un procedimiento es total?",
+            "unidad":8,
+            "posibleRespuesta": [
+                "Cuando lo termino de programar",
+                "Cuando no tiene precondiciones",
+                "Cuando recorre todo el tablero",
+                "Cuando tiene escritas todas las precondiciones"
+            ],
+            "respuesta": "cuando no tiene precondiciones"
+        },
+        {
+            "pregunta": "¿Una variante es un string?",
+            "unidad":8,
+            "posibleRespuesta": [
+                "Si",
+                "No"
+                ],
+            "respuesta": "no"
         },
         {
             "pregunta": "¿Que me conviene usar si tengo que hacer un recorrido de busqueda?",
+            "unidad":9,
             "posibleRespuesta": [
                 "repeat",
                 "if",
@@ -134,10 +184,5 @@
             ],
             "respuesta": "while"
         }
-    
-    
-    
-    
-
     ]
 }
