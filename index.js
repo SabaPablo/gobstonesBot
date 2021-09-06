@@ -304,15 +304,15 @@ client.on("message", function(message) {
       case "inicializar()": message.reply(restart())
   
       case "help" : message.reply(help); break;
-      case "preguntaUnidad(1)" : message.reply(hacerPreguntaDe(message.author.username),1); break;
-      case "preguntaUnidad(2)" : message.reply(hacerPreguntaDe(message.author.username),2); break;
-      case "preguntaUnidad(3)" : message.reply(hacerPreguntaDe(message.author.username),3); break;
-      case "preguntaUnidad(4)" : message.reply(hacerPreguntaDe(message.author.username),4); break;
-      case "preguntaUnidad(5)" : message.reply(hacerPreguntaDe(message.author.username),5); break;
-      case "preguntaUnidad(6)" : message.reply(hacerPreguntaDe(message.author.username),6); break;
-      case "preguntaUnidad(7)" : message.reply(hacerPreguntaDe(message.author.username),7); break;
-      case "preguntaUnidad(8)" : message.reply(hacerPreguntaDe(message.author.username),8); break;
-      case "preguntaUnidad(9)" : message.reply(hacerPreguntaDe(message.author.username),9); break;
+      case "preguntaUnidad(1)" : message.reply(hacerPreguntaDe(message.author.username,1)); break;
+      case "preguntaUnidad(2)" : message.reply(hacerPreguntaDe(message.author.username,2)); break;
+      case "preguntaUnidad(3)" : message.reply(hacerPreguntaDe(message.author.username,3)); break;
+      case "preguntaUnidad(4)" : message.reply(hacerPreguntaDe(message.author.username,4)); break;
+      case "preguntaUnidad(5)" : message.reply(hacerPreguntaDe(message.author.username,5)); break;
+      case "preguntaUnidad(6)" : message.reply(hacerPreguntaDe(message.author.username,6)); break;
+      case "preguntaUnidad(7)" : message.reply(hacerPreguntaDe(message.author.username,7)); break;
+      case "preguntaUnidad(8)" : message.reply(hacerPreguntaDe(message.author.username,8)); break;
+      case "preguntaUnidad(9)" : message.reply(hacerPreguntaDe(message.author.username,9)); break;
       case "preguntaAzarosa()" : message.reply(hacerPregunta(message.author.username)); break;
       default: configuracionOError(message, command)
     
